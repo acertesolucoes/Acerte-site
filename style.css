@@ -8,11 +8,15 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Impede que a tela transborde horizontalmente */
+    overflow-y: auto;
 }
 
 body{
     background-color: #fff;
     height: 100vh;
+    overflow-x: hidden; /* Impede que a tela transborde horizontalmente */
+    overflow-y: auto;
 }
 
 .interface{
