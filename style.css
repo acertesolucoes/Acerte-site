@@ -553,6 +553,122 @@ button:hover {
     background-color: #a52a2a;
 }
 
+/* Estilos gerais para a seção da equipe */
+.team-section {
+    padding: 60px 4%; /* Espaçamento interno */
+    background-color: #f8f9fa; /* Cor de fundo */
+    text-align: center; /* Alinhar o texto ao centro */
+}
+
+.team-section h2 {
+    font-size: 36px; /* Tamanho da fonte do título */
+    margin-bottom: 40px; /* Espaçamento inferior do título */
+    color: #343a40; /* Cor do título */
+}
+
+.team-container {
+    display: flex; /* Layout flexível para os membros da equipe */
+    flex-wrap: wrap; /* Quebrar para a próxima linha em telas menores */
+    justify-content: center; /* Centralizar os membros da equipe */
+    gap: 30px; /* Espaçamento entre os membros da equipe */
+}
+
+.team-member {
+    width: 300px; /* Largura fixa para os membros da equipe */
+    background-color: #fff; /* Cor de fundo dos membros da equipe */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 20px; /* Espaçamento interno dos membros da equipe */
+    text-align: center; /* Alinhar o texto ao centro */
+}
+
+.team-member img {
+    width: 150px; /* Largura da imagem */
+    height: 150px; /* Altura da imagem */
+    border-radius: 50%; /* Formato circular para a imagem */
+    object-fit: cover; /* Ajustar a imagem ao tamanho do contêiner */
+    margin-bottom: 20px; /* Espaçamento inferior da imagem */
+}
+
+.team-member h3 {
+    font-size: 24px; /* Tamanho da fonte do nome */
+    margin-bottom: 10px; /* Espaçamento inferior do nome */
+    color: #343a40; /* Cor do nome */
+}
+
+.team-member p {
+    font-size: 16px; /* Tamanho da fonte da descrição */
+    color: #6c757d; /* Cor da descrição */
+    margin-bottom: 20px; /* Espaçamento inferior da descrição */
+}
+
+.btn-social {
+    display: flex; /* Layout flexível para os botões sociais */
+    justify-content: center; /* Centralizar os botões sociais */
+    gap: 10px; /* Espaçamento entre os botões sociais */
+}
+
+.btn-social button {
+    width: 40px; /* Largura dos botões sociais */
+    height: 40px; /* Altura dos botões sociais */
+    border-radius: 50%; /* Formato circular para os botões sociais */
+    background-color: #007bff; /* Cor de fundo dos botões sociais */
+    color: #fff; /* Cor dos ícones dos botões sociais */
+    border: none; /* Remover bordas */
+    font-size: 20px; /* Tamanho dos ícones dos botões sociais */
+    cursor: pointer; /* Cursor de mão */
+    transition: background-color 0.3s; /* Transição suave na mudança de cor */
+}
+
+.btn-social button:hover {
+    background-color: #0056b3; /* Cor de fundo dos botões sociais ao passar o mouse */
+}
+
+/* Estilos de responsividade */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column; /* Layout em coluna em telas menores */
+        align-items: center; /* Centralizar os membros da equipe */
+    }
+
+    .team-member {
+        width: 90%; /* Largura total em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-section {
+        padding: 30px 10px; /* Espaçamento interno menor */
+    }
+
+    .team-section h2 {
+        font-size: 24px; /* Tamanho da fonte do título menor */
+    }
+
+    .team-member {
+        padding: 15px; /* Espaçamento interno menor */
+    }
+
+    .team-member img {
+        width: 100px; /* Largura da imagem menor */
+        height: 100px; /* Altura da imagem menor */
+    }
+
+    .team-member h3 {
+        font-size: 18px; /* Tamanho da fonte do nome menor */
+    }
+
+    .team-member p {
+        font-size: 14px; /* Tamanho da fonte da descrição menor */
+    }
+
+    .btn-social button {
+        width: 30px; /* Largura dos botões sociais menor */
+        height: 30px; /* Altura dos botões sociais menor */
+        font-size: 16px; /* Tamanho dos ícones dos botões sociais menor */
+    }
+}
+
 /* Estilo do rodapé */
 
 .footer {
