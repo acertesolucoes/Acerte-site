@@ -556,14 +556,13 @@ button:hover {
 /* Estilos gerais para a seção da equipe */
 .team-section {
     padding: 60px 4%; /* Espaçamento interno */
-    background-color: #f8f9fa; /* Cor de fundo */
     text-align: center; /* Alinhar o texto ao centro */
 }
 
 .team-section h2 {
     font-size: 36px; /* Tamanho da fonte do título */
     margin-bottom: 40px; /* Espaçamento inferior do título */
-    color: #343a40; /* Cor do título */
+    color: #a52a2a; /* Cor do título */
 }
 
 .team-container {
@@ -575,7 +574,7 @@ button:hover {
 
 .team-member {
     width: 300px; /* Largura fixa para os membros da equipe */
-    background-color: #fff; /* Cor de fundo dos membros da equipe */
+    background-color: #a52a2a; /* Cor de fundo dos membros da equipe */
     border-radius: 8px; /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
     padding: 20px; /* Espaçamento interno dos membros da equipe */
@@ -612,8 +611,8 @@ button:hover {
     width: 40px; /* Largura dos botões sociais */
     height: 40px; /* Altura dos botões sociais */
     border-radius: 50%; /* Formato circular para os botões sociais */
-    background-color: #007bff; /* Cor de fundo dos botões sociais */
-    color: #fff; /* Cor dos ícones dos botões sociais */
+    background-color: #fff; /* Cor de fundo dos botões sociais */
+    color: #a52a2a; /* Cor dos ícones dos botões sociais */
     border: none; /* Remover bordas */
     font-size: 20px; /* Tamanho dos ícones dos botões sociais */
     cursor: pointer; /* Cursor de mão */
@@ -621,7 +620,7 @@ button:hover {
 }
 
 .btn-social button:hover {
-    background-color: #0056b3; /* Cor de fundo dos botões sociais ao passar o mouse */
+    background-color: #a52a2a; /* Cor de fundo dos botões sociais ao passar o mouse */
 }
 
 /* Estilos de responsividade */
