@@ -592,12 +592,12 @@ button:hover {
 .team-member h3 {
     font-size: 24px; /* Tamanho da fonte do nome */
     margin-bottom: 10px; /* Espaçamento inferior do nome */
-    color: #343a40; /* Cor do nome */
+    color: #fff; /* Cor do nome */
 }
 
 .team-member p {
     font-size: 16px; /* Tamanho da fonte da descrição */
-    color: #6c757d; /* Cor da descrição */
+    color: #fff; /* Cor da descrição */
     margin-bottom: 20px; /* Espaçamento inferior da descrição */
 }
 
@@ -620,7 +620,7 @@ button:hover {
 }
 
 .btn-social button:hover {
-    background-color: #a52a2a; /* Cor de fundo dos botões sociais ao passar o mouse */
+    background-color: #fff; /* Cor de fundo dos botões sociais ao passar o mouse */
 }
 
 /* Estilos de responsividade */
