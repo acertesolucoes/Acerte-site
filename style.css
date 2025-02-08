@@ -587,6 +587,7 @@ button:hover {
     border-radius: 50%; /* Formato circular para a imagem */
     object-fit: cover; /* Ajustar a imagem ao tamanho do contêiner */
     margin-bottom: 20px; /* Espaçamento inferior da imagem */
+    border: 8px solid #fff;
 }
 
 .team-member h3 {
