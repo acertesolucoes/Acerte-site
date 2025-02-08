@@ -585,7 +585,7 @@ button:hover {
     height: 150px; 
     border-radius: 50%;
     object-fit: cover; 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .team-member h3 {
