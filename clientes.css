@@ -1,0 +1,340 @@
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #fff;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #a52a2a;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    color: #fff;
+}
+
+button:hover{
+    box-shadow: 0px 0px 8px #9e2121;
+    transform: scale(1.05);
+}
+
+h2.titulo{
+    color: #000;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #a52a2a;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #a52a2a;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+
+/* ESTILO DO CABEÇALHO */
+
+/* Estilo base */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 1000; 
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0 4%;
+    transition: top 0.3s;
+}
+
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.menu-desktop ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-desktop ul li {
+    margin: 0 15px;
+}
+
+.menu-desktop ul li a {
+    text-decoration: none;
+    color: #a52a2a;
+    transition: 0.2s;
+}
+
+.menu-desktop ul li a:hover {
+    color: #5a5a5a;
+}
+
+.menu-btn{
+    display: none;
+}
+
+/* Estilos para o botão de hambúrguer */
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 5px;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    height: 6px;
+    background-color: #a52a2a;
+    transition: 0.3s;
+    margin: 3px 0;
+}
+
+.btn-contato button {
+    background-color: #a52a2a;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Responsivo */
+@media (max-width: 1020px) {
+    /* Esconde o menu e botão de contato inicialmente */
+    
+    .logo {
+        position: absolute;  /* Fixando a logo no canto */
+        left: 0px;           /* Ajuste a distância do canto esquerdo */
+        top: 70%;            /* Alinha verticalmente ao centro do header */
+        transform: translateY(-50%);  /* Corrige o alinhamento para ficar centrado verticalmente */
+    }
+    
+    .logo img {
+        width: 100px;
+        height: auto;
+    }
+
+    .menu-desktop {
+        display: none;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-desktop ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-desktop ul li {
+        margin: 15px 0;
+    }
+
+    .btn-contato {
+        display: none;
+    }
+
+    /* Exibe o botão de menu (hambúrguer) */
+    .menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #a52a2a;
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        left: 90%;
+    }
+
+    .menu-btn:hover{
+        background-color: transparent;
+    }
+
+    .menu-btn:focus {
+        outline: none;
+    }
+
+    /* Exibe o menu quando ativo */
+    .menu-desktop.active {
+        display: flex;
+    }
+
+    .logo img {
+        width: 120px;
+        height: auto;
+    }
+}
+
+
+/* CLIENTES */
+
+.clientes-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.titulo-clientes h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #a52a2a;
+}
+
+.titulo-clientes p {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.clientes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.cliente-card {
+    background: #a52a2a;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.cliente-card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para a imagem e vídeo */
+.cliente-imagem {
+    position: relative;
+}
+
+/* Ambos (imagem e vídeo) sempre visíveis */
+.imagem-clientes img,
+.video-clientes video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo do vídeo */
+.video-clientes video {
+    display: block; /* Vídeo visível o tempo todo */
+    visibility: visible; /* Garantir que o player de vídeo será visível sempre */
+}
+
+/* Estilo para o texto */
+.cliente-texto {
+    padding: 20px;
+    text-align: left;
+}
+
+.cliente-texto h3 {
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.cliente-texto p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .clientes-section {
+        padding: 30px 15px;
+    }
+
+    .titulo-clientes h2 {
+        font-size: 1.75rem;
+    }
+
+    .titulo-clientes p {
+        font-size: 0.9rem;
+    }
+
+    .cliente-texto h3 {
+        font-size: 1.1rem;
+    }
+
+    .cliente-texto p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .clientes-section {
+        padding: 20px 10px;
+    }
+
+    .titulo-clientes h2 {
+        font-size: 1.5rem;
+    }
+
+    .titulo-clientes p {
+        font-size: 0.8rem;
+    }
+
+    .cliente-texto h3 {
+        font-size: 1rem;
+    }
+
+    .cliente-texto p {
+        font-size: 0.85rem;
+    }
+}
