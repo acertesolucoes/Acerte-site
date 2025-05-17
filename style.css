@@ -8,15 +8,11 @@
 
 html{
     scroll-behavior: smooth;
-    overflow-x: hidden; /* Impede que a tela transborde horizontalmente */
-    overflow-y: auto;
 }
 
 body{
     background-color: #fff;
     height: 100vh;
-    overflow-x: hidden; /* Impede que a tela transborde horizontalmente */
-    overflow-y: auto;
 }
 
 .interface{
@@ -41,7 +37,7 @@ body{
 }
 
 button:hover{
-    box-shadow: 0px 0px 8px #FF0000;
+    box-shadow: 0px 0px 8px #9e2121;
     transform: scale(1.05);
 }
 
@@ -285,41 +281,365 @@ header .interface {
 }
 
 /* ESTILO SOBRE */
-section.sobre{
-    padding: 100px 4%;
+:root {
+    --cor-primaria: #a62c2b;
+    --cor-primaria-escura: #8a2423;
+    --cor-primaria-clara: #c13e3d;
+    --cor-texto: #333333;
+    --cor-texto-claro: #666666;
+    --cor-fundo: #ffffff;
+    --cor-fundo-alternativo: #f9f9f9;
+    --cor-borda: #e0e0e0;
+    --sombra-suave: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --transicao-padrao: all 0.3s ease;
 }
 
-section.sobre img{
-    width: 275px;
-    height: auto;
-    border-radius: 20px;
+/* Reset e estilos gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-section.sobre .flex{
-    align-items: center;
-    gap: 60px;
+body {
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    color: var(--cor-texto);
+    line-height: 1.6;
 }
 
-.sobre .txt-sobre{
-    color: #000;
-    
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-section.sobre h2 {
+/* Seção Sobre */
+.sobre-section {
+    padding: 80px 0;
+    position: relative;
+}
+
+/* Título principal centralizado */
+.sobre-titulo-principal {
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: #a52a2a;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 60px;
+    position: relative;
 }
 
-.sobre .txt-sobre p{
-    margin: 15px 0;
-    text-align: justify;
+.sobre-titulo-principal::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--cor-primaria);
+}
+
+/* Layout principal */
+.sobre-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Coluna da imagem */
+.sobre-imagem-col {
+    flex: 1;
+    min-width: 300px;
+}
+
+.sobre-imagem-wrapper {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra-suave);
+}
+
+.sobre-imagem-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--cor-primaria);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.sobre-imagem {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: var(--transicao-padrao);
+}
+
+.sobre-imagem:hover {
+    transform: scale(1.02);
+}
+
+/* Coluna do conteúdo */
+.sobre-conteudo-col {
+    flex: 1;
+    min-width: 300px;
+}
+
+.sobre-subtitulo {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.sobre-descricao {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cor-texto);
+    margin-bottom: 30px;
+}
+
+/* Missão, Visão e Valores */
+.sobre-mvv {
+    margin-top: 40px;
+}
+
+.sobre-mvv-item {
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid var(--cor-primaria);
+}
+
+.sobre-mvv-titulo {
     font-size: 20px;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.sobre .txt-sobre p span{
-    color: #a52a2a;
+.sobre-mvv-texto {
+    font-size: 16px;
+    color: var(--cor-texto);
+}
+
+/* Cards de estatísticas */
+.sobre-estatisticas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.sobre-estatistica-card {
+    flex: 1;
+    min-width: 200px;
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicao-padrao);
+    border-bottom: 3px solid transparent;
+}
+
+.sobre-estatistica-card:hover {
+    transform: translateY(-5px);
+    border-bottom: 3px solid var(--cor-primaria);
+}
+
+.sobre-estatistica-numero {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.sobre-estatistica-texto {
+    font-size: 14px;
+    color: var(--cor-texto-claro);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Seção de equipe */
+.sobre-equipe {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.sobre-equipe-titulo {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.sobre-equipe-titulo::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: var(--cor-primaria);
+}
+
+/* Redes sociais */
+.sobre-redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.sobre-rede-social {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--cor-fundo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-primaria);
+    font-size: 20px;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicao-padrao);
+    text-decoration: none;
+}
+
+.sobre-rede-social:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+    transform: translateY(-3px);
+}
+
+/* CTA final */
+.sobre-cta {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.sobre-cta-botao {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--cor-primaria);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: var(--transicao-padrao);
+    box-shadow: 0 5px 15px rgba(166, 44, 43, 0.3);
+    border: 2px solid var(--cor-primaria);
+}
+
+.sobre-cta-botao:hover {
+    background-color: transparent;
+    color: var(--cor-primaria);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(166, 44, 43, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 991px) {
+    .sobre-section {
+        padding: 60px 0;
+    }
+    
+    .sobre-titulo-principal {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+    
+    .sobre-subtitulo {
+        font-size: 28px;
+    }
+    
+    .sobre-container {
+        flex-direction: column-reverse;
+    }
+    
+    .sobre-imagem-col {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sobre-section {
+        padding: 40px 0;
+    }
+    
+    .sobre-titulo-principal {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .sobre-subtitulo {
+        font-size: 24px;
+    }
+    
+    .sobre-estatisticas {
+        flex-direction: column;
+    }
+    
+    .sobre-estatistica-card {
+        width: 100%;
+    }
+    
+    .sobre-mvv-item {
+        padding-left: 15px;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sobre-titulo-principal,
+.sobre-subtitulo,
+.sobre-descricao,
+.sobre-mvv-item,
+.sobre-estatistica-card,
+.sobre-imagem-wrapper {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.sobre-estatistica-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.sobre-estatistica-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.sobre-mvv-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.sobre-mvv-item:nth-child(3) {
+    animation-delay: 0.4s;
 }
 
 /* CLIENTES */
@@ -449,6 +769,7 @@ section.sobre h2 {
     transform: scale(1.05);
 }
 
+
 /* Estilo Servicos */
 
 section.servicos {
@@ -575,119 +896,104 @@ button:hover {
     background-color: #a52a2a;
 }
 
-/* Estilos gerais para a seção da equipe */
+/* Estilos gerais para a seção de equipe */
 .team-section {
-    padding: 60px 4%; 
-    text-align: center; 
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .team-section h2 {
-    font-size: 36px; 
-    margin-bottom: 40px; 
-    color: #a52a2a; 
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #a52a2a;
+    font-weight: bold;
 }
 
+/* Container para os membros da equipe */
 .team-container {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 30px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 
+/* Estilo para cada membro da equipe */
 .team-member {
-    width: 320px; 
-    background-color: #a52a2a; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
+    background-color: #a52a2a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para a imagem do membro da equipe */
 .team-member img {
-    width: 150px; 
-    height: 150px; 
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    object-fit: cover; 
+    border: #fff 3px solid;
+    object-fit: cover;
     margin-bottom: 15px;
 }
 
+/* Estilo para o nome do membro da equipe */
 .team-member h3 {
-    font-size: 18px; 
-    margin-bottom: 10px; 
-    color: #fff; 
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
+/* Estilo para os cargos dos membros */
 .team-member p {
-    font-size: 16px; 
-    color: #fff; 
-    margin-bottom: 15px; 
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-.btn-social {
-    display: flex; 
-    justify-content: center; 
-    gap: 10px; 
+.team-member p strong {
+    color: #fff;
 }
 
-.btn-social button {
-    width: 40px; 
-    height: 40px;
-    border-radius: 50%; 
-    background-color: #fff; 
-    color: #a52a2a; 
+.team-social button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #a52a2a;
     border: none;
     font-size: 20px;
     cursor: pointer;
-    transition: background-color 0.3s; 
+    transition: background-color 0.3s;
 }
 
-.btn-social button:hover {
-    background-color: #fff;
+.team-social button:hover {
+    background-color: #a52a2a;
+    color: #fff;
 }
 
 /* Estilos de responsividade */
 @media (max-width: 768px) {
     .team-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team-member {
-        width: 90%; 
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (max-width: 480px) {
-    .team-section {
-        padding: 30px 10px; 
-    }
-
-    .team-section h2 {
-        font-size: 24px;
-    }
-
-    .team-member {
-        padding: 15px;
-    }
-
-    .team-member img {
-        width: 100px
-        height: 100px;
-    }
-
-    .team-member h3 {
-        font-size: 18px;
-    }
-
-    .team-member p {
-        font-size: 14px;
-    }
-
-    .btn-social button {
-        width: 30px;
-        height: 30px;
-        font-size: 16px;
+    .team-container {
+        grid-template-columns: 1fr;
     }
 }
+
+
 
 /* Estilo do rodapé */
 
